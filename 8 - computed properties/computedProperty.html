@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>VueJS</title>
+    <link rel="stylesheet" href="">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="increment">Click me!</button>
+    <p>{{ counter }}</p>
+    <!-- Not computedProp() -->
+    <p>{{ computedProp }}</p>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            counter: 0
+        },
+        computed: {
+            computedProp: function () {
+                return this.counter > 5 ? 'Greater than 5' : 'Not greater than 5';
+            }
+        },
+        methods: {
+            increment: function() {
+                this.counter++;
+            }
+        }
+    })
+</script>
+</body>
+</html>

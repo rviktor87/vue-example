@@ -8,21 +8,18 @@
 </head>
 <body>
 <div id="app">
-    <input type="text" v-on:input="changeGreeting">
-    <!-- Shorthand:
-        <input type="text" @input="changeGreeting">
-    -->
-    <p>{{ greeting }}</p>
+    <button v-on:click="increment(2, $event)">Click me!</button>
+    <p>{{ counter }}</p>
 </div>
 <script>
     new Vue({
         el: '#app',
         data: {
-            greeting: 'Hello World!'
+            counter: 0
         },
         methods: {
-            changeGreeting: function(event) {
-                this.greeting = event.target.value;
+            increment: function(step, event) {
+                this.counter+=step;
             }
         }
     })

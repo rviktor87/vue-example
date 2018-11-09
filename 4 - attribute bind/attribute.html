@@ -9,6 +9,9 @@
 <body>
 <div id="app">
     <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+    <!-- Shorthand
+        <a :href="link">Google</a>
+    -->
     <!-- won't work
     <p>{{ sayHello() }} - <a href="{{ link }}"></a></p>
     -->
