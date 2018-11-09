@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+<div id="app">
+    <p v-if="show">You can see me!</p>
+    <p v-else>Now you see me!</p>
+    <button @click="show = !show">Toggle</button>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            show: true
+        }
+    });
+</script>
+</body>
+</html>

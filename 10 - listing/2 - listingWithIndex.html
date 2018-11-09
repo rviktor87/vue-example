@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="(ingredient, index) in ingredients">{{ ingredient }} ({{ index }})</li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            ingredients: ['vegetables', 'honey', 'cucumber']
+        }
+    });
+</script>
+</body>
+</html>
